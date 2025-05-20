@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  firmadyne:
+    build: ~/firmadyne
+    privileged: true
+    network_mode: "host"
+    stdin_open: true
+    tty: true
