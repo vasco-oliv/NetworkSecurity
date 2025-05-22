@@ -1,59 +1,67 @@
 version: '3.8'
 
 services:
-  # MIPS Devices
+  # Dispositivos MIPS
   mips1:
     build:
-      context: ./devices/mips
+      context: ./simulated-botnet/devices/mips
     container_name: mips1
     networks:
       - botnet-net
 
   mips2:
     build:
-      context: ./devices/mips
+      context: ./simulated-botnet/devices/mips
     container_name: mips2
     networks:
       - botnet-net
 
   mips3:
     build:
-      context: ./devices/mips
+      context: ./simulated-botnet/devices/mips
     container_name: mips3
     networks:
       - botnet-net
 
-  # ARM Devices
+  # Dispositivos ARM
   arm1:
     build:
-      context: ./devices/arm
+      context: ./simulated-botnet/devices/arm
     container_name: arm1
     networks:
       - botnet-net
 
   arm2:
     build:
-      context: ./devices/arm
+      context: ./simulated-botnet/devices/arm
     container_name: arm2
     networks:
       - botnet-net
 
   arm3:
     build:
-      context: ./devices/arm
+      context: ./simulated-botnet/devices/arm
     container_name: arm3
     networks:
       - botnet-net
 
-  # C2 Server
+  # Servidor C2
   c2server:
     build:
-      context: ./c2
+      context: ./simulated-botnet/c2
     container_name: c2server
     ports:
       - "8080:80"
     networks:
       - botnet-net
+
+  # Firmware Analysis: WNAP320
+  firmadyne:
+    build: ~/firmadyne
+    privileged: true
+    network_mode: "host"
+    stdin_open: true
+    tty: true
 
 networks:
   botnet-net:
