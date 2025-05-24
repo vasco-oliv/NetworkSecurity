@@ -9,7 +9,14 @@ LOGFILE="/tmp/cgi-run.log"
 CMD=$(echo "$QUERY_STRING" | sed -n 's/^cmd=\(.*\)/\1/p')
 
 # Manually decode some URL-encoded characters
-CMD=$(echo "$CMD" | sed -e 's/%20/ /g' -e 's/%3A/:/g' -e 's/%2F/\//g' -e 's/%2E/./g' -e 's/%3a/:/g' -e 's/%2f/\//g' -e 's/%2e/./g')
+CMD=$(echo "$CMD" | sed \
+  -e 's/+/ /g' \
+  -e 's/%2B/+/g' -e 's/%2b/+/g' \
+  -e 's/%20/ /g' \
+  -e 's/%3A/:/g' -e 's/%3a/:/g' \
+  -e 's/%2F/\//g' -e 's/%2f/\//g' \
+  -e 's/%2E/./g' -e 's/%2e/./g' \
+  -e 's/%3B/;/g' -e 's/%3b/;/g')
 
 echo "Running command: $CMD" >> "$LOGFILE" 2>&1
 
