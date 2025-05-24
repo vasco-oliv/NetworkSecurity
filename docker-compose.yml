@@ -7,21 +7,24 @@ services:
       context: ./simulated-botnet/devices/mips
     container_name: mips1
     networks:
-      - botnet-net
+      botnet-net:
+        ipv4_address: 172.20.0.2
 
   mips2:
     build:
       context: ./simulated-botnet/devices/mips
     container_name: mips2
     networks:
-      - botnet-net
+      botnet-net:
+        ipv4_address: 172.20.0.3
 
   mips3:
     build:
       context: ./simulated-botnet/devices/mips
     container_name: mips3
     networks:
-      - botnet-net
+      botnet-net:
+        ipv4_address: 172.20.0.4
 
   # Dispositivos ARM
   arm1:
@@ -29,21 +32,24 @@ services:
       context: ./simulated-botnet/devices/arm
     container_name: arm1
     networks:
-      - botnet-net
+      botnet-net:
+        ipv4_address: 172.20.0.5
 
   arm2:
     build:
       context: ./simulated-botnet/devices/arm
     container_name: arm2
     networks:
-      - botnet-net
+      botnet-net:
+        ipv4_address: 172.20.0.6
 
   arm3:
     build:
       context: ./simulated-botnet/devices/arm
     container_name: arm3
     networks:
-      - botnet-net
+      botnet-net:
+        ipv4_address: 172.20.0.7
 
   # Servidor C2
   c2server:
@@ -53,7 +59,8 @@ services:
     ports:
       - "8080:80"
     networks:
-      - botnet-net
+      botnet-net:
+        ipv4_address: 172.20.0.8
 
   # Victim Ubuntu Container 
   victim1:
