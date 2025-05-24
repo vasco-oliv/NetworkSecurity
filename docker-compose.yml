@@ -55,6 +55,18 @@ services:
     networks:
       - botnet-net
 
+  # Victim Ubuntu Container 
+  victim1:
+    image: ubuntu:20.04
+    container_name: victim1
+    tty: true
+    stdin_open: true
+    command: ["sleep", "infinity"]
+    networks:
+      botnet-net:
+        ipv4_address: 172.20.0.10
+
+
   # Firmware Analysis: WNAP320
   firmadyne:
     build: ~/firmadyne
@@ -66,3 +78,6 @@ services:
 networks:
   botnet-net:
     driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16
