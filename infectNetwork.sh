@@ -24,4 +24,7 @@ for IP in "${ARM_DEVICES[@]}"; do
   python3 script.py "$IP" 1 &
 done
 
+echo "Running script for WNAP router"
+python3 wnapexploit.py "192.168.0.100" &
+
 wait

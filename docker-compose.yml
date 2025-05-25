@@ -9,6 +9,8 @@ services:
     networks:
       botnet-net:
         ipv4_address: 172.20.0.2
+    tmpfs:
+      - /payloads
 
   mips2:
     build:
@@ -17,6 +19,8 @@ services:
     networks:
       botnet-net:
         ipv4_address: 172.20.0.3
+    tmpfs:
+      - /payloads
 
   mips3:
     build:
@@ -25,6 +29,8 @@ services:
     networks:
       botnet-net:
         ipv4_address: 172.20.0.4
+    tmpfs:
+      - /payloads
 
   # Dispositivos ARM
   arm1:
@@ -34,6 +40,8 @@ services:
     networks:
       botnet-net:
         ipv4_address: 172.20.0.5
+    tmpfs:
+      - /payloads
 
   arm2:
     build:
@@ -42,6 +50,8 @@ services:
     networks:
       botnet-net:
         ipv4_address: 172.20.0.6
+    tmpfs:
+      - /payloads
 
   arm3:
     build:
@@ -50,6 +60,8 @@ services:
     networks:
       botnet-net:
         ipv4_address: 172.20.0.7
+    tmpfs:
+      - /payloads
 
   file-server:
     image: python:3.11-slim
