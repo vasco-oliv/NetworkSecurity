@@ -19,6 +19,7 @@ Open a terminal and run the following command:
 cd /NetworkSecurity
 setup.sh
 docker-compose up
+```
 
 ### 2. Access the Docker Container
 
@@ -29,6 +30,7 @@ cd /NetworkSecutiry
 docker exec -it networksecurity_firmadyne_1 /bin/bash
 cd firmadyne
 ./scratch/1/run.sh
+```
 
 ### 3. Run Homo-Fork
 
@@ -37,6 +39,7 @@ Open a new terminal
 ```bash
 cd /Homo-Fork
 go run .
+```
 
 ### 4. Infect the Network
 
@@ -45,6 +48,7 @@ Open a new terminal
 ```bash
 cd /NetworkSecurity
 bash infectNetwork.sh
+```
 
 ### 5. Connect Via Telnet
 
@@ -57,5 +61,5 @@ Password : root
 bots
 methods
 !tcpmix
-
+```
 
