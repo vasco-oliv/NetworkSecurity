@@ -51,16 +51,13 @@ services:
       botnet-net:
         ipv4_address: 172.20.0.7
 
-  # Servidor C2
-  c2server:
-    build:
-      context: ./simulated-botnet/c2
-    container_name: c2server
-    ports:
-      - "8080:80"
-    networks:
-      botnet-net:
-        ipv4_address: 172.20.0.8
+  file-server:
+    image: python:3.11-slim
+    command: python -m http.server 8000
+    working_dir: /shared
+    volumes:
+      - ./binaries:/shared:ro
+    network_mode: "host"
 
   # Victim Ubuntu Container 
   victim1:

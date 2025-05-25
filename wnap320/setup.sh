@@ -1,4 +1,6 @@
 #!/bin/bash
 
-cp -a images ~/firmadyne
-cp -a scratch ~/firmadyne
+cp -a imagesinit ~/firmadyne
+cp -a scratchinit ~/firmadyne
+
+cp startup.sh ~/firmadyne/startup.sh

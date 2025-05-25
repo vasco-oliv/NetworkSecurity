@@ -16,10 +16,12 @@ ARM_DEVICES=(
 # Loop through each IP and run the script
 for IP in "${MIPS_DEVICES[@]}"; do
   echo "Running script.py for $IP"
-  python3 script.py "$IP" 2
+  python3 script.py "$IP" 2 &
 done
 
 for IP in "${ARM_DEVICES[@]}"; do
   echo "Running script.py for $IP"
-  python3 script.py "$IP" 1
+  python3 script.py "$IP" 1 &
 done
+
+wait
