@@ -78,6 +78,7 @@ services:
     tty: true
     stdin_open: true
     command: ["sleep", "infinity"]
+    privileged: true
     networks:
       botnet-net:
         ipv4_address: 172.20.0.10
