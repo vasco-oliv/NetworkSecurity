@@ -23,7 +23,7 @@ Open a terminal and run the following command:
 
 ```bash
 cd ~/NetworkSecurity/wnap320
-setup.sh
+./setup.sh
 cd ..
 docker-compose up
 ```
