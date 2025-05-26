@@ -11,6 +11,10 @@ This project involves running a network security analysis environment using Dock
 - Firmadyne (cloned recursively to the home directory, as specified in its GitHub page)
 - Homo-Network (publicly available on GitHub). In it's configuration file, the IP address for the CnC must be changed to 0.0.0.0.
 
+### Note
+
+This setup was tested on Kali virtual machines, and assumes that the host has the IP 10.0.2.15, which is the default in the Kali image. To run the setup on a different distribution, the IP can be added manually to the VM's interfaces.
+
 ## Setup & Run
 
 ### 1. Build and Start Docker Containers
