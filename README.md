@@ -18,7 +18,7 @@ This project involves running a network security analysis environment using Dock
 Open a terminal and run the following command:
 
 ```bash
-cd /NetworkSecurity
+cd ~/NetworkSecurity
 setup.sh
 docker-compose up
 ```
@@ -28,7 +28,7 @@ docker-compose up
 Open a new terminal
  
 ```bash
-cd /NetworkSecutiry
+cd ~/NetworkSecutiry
 docker exec -it networksecurity_firmadyne_1 /bin/bash
 cd firmadyne
 ./scratch/1/run.sh
@@ -48,7 +48,7 @@ go run .
 Open a new terminal
 
 ```bash
-cd /NetworkSecurity
+cd ~/NetworkSecurity
 bash infectNetwork.sh
 ```
 
