@@ -1,6 +1,6 @@
 # Network Security & Homo-Fork Project
 
-This project involves running a network security analysis environment using Docker, Firmadyne, and a Go-based application named `Homo-Fork`. Below are the steps required to set up and run the project.
+This project involves running a network security analysis environment using Docker, Firmadyne, and a Go-based application named `Homo-Network`. Below are the steps required to set up and run the project.
 
 ## Requirements
 
@@ -8,6 +8,8 @@ This project involves running a network security analysis environment using Dock
 - Go (Golang)
 - Telnet client
 - Git (optional)
+- Firmadyne (cloned recursively to the home directory, as specified in its GitHub page)
+- Homo-Network (publicly available on GitHub). In it's configuration file, the IP address for the CnC must be changed to 0.0.0.0.
 
 ## Setup & Run
 
@@ -21,7 +23,7 @@ setup.sh
 docker-compose up
 ```
 
-### 2. Access the Docker Container
+### 2. Access the Firmadyne Docker Container
 
 Open a new terminal
  
@@ -32,12 +34,12 @@ cd firmadyne
 ./scratch/1/run.sh
 ```
 
-### 3. Run Homo-Fork
+### 3. Run Homo-Network
 
 Open a new terminal
 
 ```bash
-cd /Homo-Fork
+cd /Homo-Network
 go run .
 ```
 
