@@ -22,8 +22,9 @@ This setup was tested on Kali virtual machines, and assumes that the host has th
 Open a terminal and run the following command:
 
 ```bash
-cd ~/NetworkSecurity
+cd ~/NetworkSecurity/wnap320
 setup.sh
+cd ..
 docker-compose up
 ```
 
