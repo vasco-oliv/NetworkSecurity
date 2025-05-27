@@ -46,7 +46,7 @@ The password for the firmadyne user is firmadyne.
 Open a new terminal
 
 ```bash
-cd /Homo-Network
+cd ~/Homo-Network
 go run .
 ```
 
