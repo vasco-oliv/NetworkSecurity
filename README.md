@@ -1,4 +1,4 @@
-# Network Security & Homo-Fork Project
+# Network Security Project
 
 This project involves running a network security analysis environment using Docker, Firmadyne, and a Go-based application named `Homo-Network`. Below are the steps required to set up and run the project.
 
