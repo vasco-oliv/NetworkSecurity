@@ -9,7 +9,7 @@ This project involves running a network security analysis environment using Dock
 - Telnet client
 - Git (optional)
 - Firmadyne (cloned recursively to the home directory, as specified in its GitHub page)
-- Homo-Network (publicly available on GitHub). In it's configuration file, the IP address for the CnC must be changed to 0.0.0.0.
+- Homo-Network (publicly available on GitHub). In its configuration file, the IP address for the CnC must be changed to 0.0.0.0.
 
 ### Note
 
