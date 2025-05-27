@@ -36,8 +36,10 @@ Open a new terminal
 cd ~/NetworkSecutiry
 docker exec -it networksecurity_firmadyne_1 /bin/bash
 cd firmadyne
+export USER=firmadyne
 ./scratch/1/run.sh
 ```
+The password for the firmadyne user is firmadyne.
 
 ### 3. Run Homo-Network
 
